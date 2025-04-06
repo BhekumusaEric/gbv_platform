@@ -1,0 +1,53 @@
+{% extends "anonny_help/base.html" %}
+{% load static %}
+
+{% block title %}Home - Higher Health Platform{% endblock %}
+
+{% block content %}
+<div class="jumbotron text-center">
+    <h1 class="display-4">Welcome to Higher Health</h1>
+    <p class="lead">Your safe and anonymous platform to report gender-based violence and access trusted counseling and healthcare support.</p>
+    <hr class="my-4">
+    <p>Connect with experienced healthcare workers and counselors, get information, and book counseling appointments—all securely and confidentially.</p>
+    <a class="btn btn-primary btn-lg" href="{% url 'report_incident' %}" role="button">Report an Incident</a>
+    <a class="btn btn-success btn-lg" href="{% url 'view_information' %}" role="button">Learn More</a>
+</div>
+
+<div class="container">
+    <div class="row">
+        <!-- Section for Services -->
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img class="card-img-top" src="{% static 'images/counseling.jpg' %}" alt="Counseling">
+                <div class="card-body">
+                    <h5 class="card-title">Counseling</h5>
+                    <p class="card-text">Connect with professional counselors and healthcare workers for confidential support.</p>
+                    <a href="{% url 'schedule_appointment' %}" class="btn btn-outline-primary">Book Appointment</a>
+                </div>
+            </div>
+        </div>
+        <!-- Section for Information -->
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img class="card-img-top" src="{% static 'images/information.jpg' %}" alt="Information">
+                <div class="card-body">
+                    <h5 class="card-title">Information & Articles</h5>
+                    <p class="card-text">Access educational resources, articles, and programs aimed at supporting your well-being.</p>
+                    <a href="{% url 'view_information' %}" class="btn btn-outline-success">View Information</a>
+                </div>
+            </div>
+        </div>
+        <!-- Section for Emergency Help -->
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img class="card-img-top" src="{% static 'images/emergency.jpg' %}" alt="Emergency Help">
+                <div class="card-body">
+                    <h5 class="card-title">Emergency Assistance</h5>
+                    <p class="card-text">In urgent situations, request immediate help from our support team.</p>
+                    <a href="{% url 'request_help' %}" class="btn btn-outline-danger">Request Help</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
