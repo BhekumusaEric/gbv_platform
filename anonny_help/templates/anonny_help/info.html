@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Information</title>
+</head>
+<body>
+    <h1>Articles</h1>
+    <ul>
+    {% for article in articles %}
+        <li><strong>{{ article.title }}</strong>: {{ article.content|truncatewords:20 }}</li>
+    {% endfor %}
+    </ul>
+    <h1>Health Programs</h1>
+    <ul>
+    {% for program in programs %}
+        <li><strong>{{ program.name }}</strong>: {{ program.description|truncatewords:20 }}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
